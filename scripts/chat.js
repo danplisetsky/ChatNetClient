@@ -5,10 +5,12 @@ function WebSocketTest(ip)
       alert("WebSocket is supported by your Browser!");
       
       // Let us open a web socket
-      var ws = new WebSocket("ws://" + ip + ":7777");
-       
+      var ws = new WebSocket("ws://" + ip + ":7777/Laputa");
+      console.log(ws.OPEN);
+
       ws.onopen = function()
-      {
+      {          
+          console.log("me be open");
          // Web Socket is connected, send data using send()
          ws.send("Message to send");
          alert("Message is sent...");
